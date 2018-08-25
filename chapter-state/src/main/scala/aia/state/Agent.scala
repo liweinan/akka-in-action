@@ -9,8 +9,9 @@ import akka.util.Timeout
 
 
 case class BookStatistics(val nameBook: String, nrSold: Int)
+
 case class StateBookStatistics(val sequence: Long,
-                            books: Map[String, BookStatistics])
+                               books: Map[String, BookStatistics])
 
 
 class BookStatisticsMgr(system: ActorSystem) {
